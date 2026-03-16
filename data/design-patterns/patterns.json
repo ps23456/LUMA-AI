@@ -1,0 +1,556 @@
+[
+  {
+    "id": "pat_1773656967132_a4puh96",
+    "sourceUrl": "https://thesideblogger.com/best-blogging-platforms/",
+    "industry": "other",
+    "usedAt": 1773656967132,
+    "navLayout": "default",
+    "heroLayout": "static",
+    "sectionTypes": [
+      "hero"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "sans-serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#a6dcef",
+      "#2a6f7d",
+      "#2a6f7d"
+    ],
+    "designMood": "modern",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click",
+        "example": "Each nav item links to #pagename"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773380799637_t0f35r7",
+    "industry": "e-commerce",
+    "usedAt": 1773380799637,
+    "navLayout": "default",
+    "heroLayout": "static",
+    "sectionTypes": [
+      "navbar",
+      "hero"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#FFFFFF",
+      "#000000",
+      "#FF6600"
+    ],
+    "designMood": "elegant",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects on click",
+        "example": ""
+      }
+    ]
+  },
+  {
+    "id": "pat_1773380334865_fj363h3",
+    "industry": "e-commerce",
+    "usedAt": 1773380334865,
+    "navLayout": "default",
+    "heroLayout": "static",
+    "sectionTypes": [
+      "navbar",
+      "hero"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#ffffff",
+      "#000000",
+      "#ff6600"
+    ],
+    "designMood": "modern",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects on click",
+        "example": "LEARN MORE"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773379711422_0lbd29i",
+    "industry": "e-commerce",
+    "usedAt": 1773379711422,
+    "navLayout": "default",
+    "heroLayout": "static",
+    "sectionTypes": [
+      "navbar",
+      "hero"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#FFFFFF",
+      "#000000",
+      "#FF6600"
+    ],
+    "designMood": "modern",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects on click",
+        "example": "LEARN MORE"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773379231010_n3pn113",
+    "industry": "e-commerce",
+    "usedAt": 1773379231010,
+    "navLayout": "default",
+    "heroLayout": "split",
+    "sectionTypes": [
+      "navbar",
+      "hero"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "serif",
+      "body": "sans-serif",
+      "logo": "serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#FFFFFF",
+      "#000000",
+      "#FF6600"
+    ],
+    "designMood": "corporate",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects on click",
+        "example": "LEARN MORE"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773379089898_jnacdqp",
+    "industry": "e-commerce",
+    "usedAt": 1773379089898,
+    "navLayout": "centered",
+    "heroLayout": "static",
+    "sectionTypes": [
+      "navbar",
+      "hero"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "serif",
+      "body": "sans-serif",
+      "logo": "serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#ffffff",
+      "#000000",
+      "#ff6600"
+    ],
+    "designMood": "elegant",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects on click",
+        "example": "LEARN MORE"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773312942250_aaxr55z",
+    "sourceUrl": "https://www.glinfotech.net/blog/staticwebsite/",
+    "industry": "other",
+    "usedAt": 1773312942251,
+    "navLayout": "default",
+    "heroLayout": "split",
+    "sectionTypes": [
+      "navbar",
+      "hero",
+      "content",
+      "image",
+      "cta",
+      "comment",
+      "related-posts"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "sans-serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#1a1a1a",
+      "#ffffff",
+      "#00bfa5"
+    ],
+    "designMood": "modern",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click",
+        "example": "Each nav item links to #pagename"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773298584873_w2xh0ed",
+    "sourceUrl": "https://theflowercompany.in/",
+    "industry": "e-commerce",
+    "usedAt": 1773298584873,
+    "navLayout": "centered",
+    "heroLayout": "carousel",
+    "sectionTypes": [
+      "hero",
+      "product-grid",
+      "split-content",
+      "product-carousel"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "wide",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#FFFFFF",
+      "#000000",
+      "#D8A47F"
+    ],
+    "designMood": "elegant",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click",
+        "example": "Each nav item links to #pagename"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects to shop/landing on click",
+        "example": "Shop Now"
+      },
+      {
+        "type": "product-cards-clickable",
+        "description": "Product/category cards redirect to product/category page on click"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773295861449_qs1w0qb",
+    "sourceUrl": "https://www.glinfotech.net/blog/staticwebsite/",
+    "industry": "other",
+    "usedAt": 1773295861449,
+    "navLayout": "default",
+    "heroLayout": "split",
+    "sectionTypes": [
+      "navbar",
+      "hero",
+      "about",
+      "cta",
+      "comment-form",
+      "related-posts"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "sans-serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#1A1A1A",
+      "#FFFFFF",
+      "#00C4CC"
+    ],
+    "designMood": "modern",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click",
+        "example": "Each nav item links to #pagename"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773215815266_qzw5qfz",
+    "industry": "e-commerce",
+    "usedAt": 1773215815266,
+    "navLayout": "centered",
+    "heroLayout": "carousel",
+    "sectionTypes": [
+      "navbar",
+      "hero"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "sans-serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#f8f8f8",
+      "#000000",
+      "#d8a48f"
+    ],
+    "designMood": "elegant",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects on click",
+        "example": "Explore"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773215635334_jjg0pj4",
+    "sourceUrl": "https://theflowercompany.in/",
+    "industry": "e-commerce",
+    "usedAt": 1773215635334,
+    "navLayout": "centered",
+    "heroLayout": "carousel",
+    "sectionTypes": [
+      "navbar",
+      "hero",
+      "product-grid",
+      "split-content",
+      "product-carousel",
+      "footer"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "serif",
+      "headingWeight": "normal",
+      "logoLetterSpacing": "wide",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#FFFFFF",
+      "#000000",
+      "#D8A48F"
+    ],
+    "designMood": "elegant",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click",
+        "example": "Each nav item links to #pagename"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects to shop/landing on click",
+        "example": "Shop Now"
+      },
+      {
+        "type": "product-cards-clickable",
+        "description": "Product/category cards redirect to product/category page on click"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773215216754_318frvo",
+    "industry": "e-commerce",
+    "usedAt": 1773215216754,
+    "navLayout": "default",
+    "heroLayout": "split",
+    "sectionTypes": [
+      "navbar",
+      "hero"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "sans-serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#ffffff",
+      "#000000",
+      "#ff6600"
+    ],
+    "designMood": "modern",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects on click",
+        "example": "LEARN MORE"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773214800613_4qows9y",
+    "sourceUrl": "https://theflowercompany.in/",
+    "industry": "e-commerce",
+    "usedAt": 1773214800613,
+    "navLayout": "centered",
+    "heroLayout": "carousel",
+    "sectionTypes": [
+      "navbar",
+      "hero",
+      "product-grid",
+      "split-content",
+      "product-carousel",
+      "footer"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "wide",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#FFFFFF",
+      "#000000",
+      "#D8A48F"
+    ],
+    "designMood": "elegant",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click",
+        "example": "Each nav item links to #pagename"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects to shop/landing on click",
+        "example": "Shop Now"
+      },
+      {
+        "type": "product-cards-clickable",
+        "description": "Product/category cards redirect to product/category page on click"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773657073774_matffn6",
+    "sourceUrl": "https://www.samsung.com/in/",
+    "industry": "e-commerce",
+    "usedAt": 1773657073774,
+    "navLayout": "default",
+    "heroLayout": "static",
+    "sectionTypes": [
+      "hero",
+      "product-grid",
+      "features",
+      "recommendations",
+      "footer"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "sans-serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#ffffff",
+      "#000000",
+      "#0078d4"
+    ],
+    "designMood": "modern",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click",
+        "example": "Each nav item links to #pagename"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects to shop/landing on click",
+        "example": "Learn more"
+      },
+      {
+        "type": "product-cards-clickable",
+        "description": "Product/category cards redirect to product/category page on click"
+      }
+    ]
+  }
+]
