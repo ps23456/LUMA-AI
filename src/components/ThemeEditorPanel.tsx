@@ -133,14 +133,17 @@ export function ThemeEditorPanel() {
 
   const layoutForLanding = ctx?.layoutForTheme ?? ctx?.layout;
   const onUpdateLanding = ctx?.onUpdateHome ?? ctx?.onUpdate;
+  const currentPageLayout = ctx?.layout;
+  const onUpdateCurrentPage = ctx?.onUpdate;
 
   const { navIndex, heroIndex } = useMemo(() => {
-    const sections = layoutForLanding?.sections ?? [];
+    const landingSections = layoutForLanding?.sections ?? [];
+    const currentSections = currentPageLayout?.sections ?? [];
     return {
-      navIndex: sections.findIndex((s: Section) => s.type === "navbar"),
-      heroIndex: sections.findIndex((s: Section) => s.type === "hero"),
+      navIndex: landingSections.findIndex((s: Section) => s.type === "navbar"),
+      heroIndex: currentSections.findIndex((s: Section) => s.type === "hero"),
     };
-  }, [layoutForLanding?.sections]);
+  }, [layoutForLanding?.sections, currentPageLayout?.sections]);
 
   const legacyFontMap: Record<string, string> = {
     "sans-serif": "Inter",
@@ -184,7 +187,6 @@ export function ThemeEditorPanel() {
   useEffect(() => {
     const sections = layoutForLanding?.sections ?? [];
     const nav = sections.find((s: Section) => s.type === "navbar");
-    const hero = sections.find((s: Section) => s.type === "hero");
     if (nav && nav.type === "navbar") {
       setNavStyle(nav.props.navStyle ?? "default");
       setLogoStyle(nav.props.logoStyle ?? "icon");
@@ -202,10 +204,15 @@ export function ThemeEditorPanel() {
       setLogoHeight(lh != null ? lh : 32);
       setLogoWidth(lw != null ? lw : 140);
     }
+  }, [layoutForLanding?.sections]);
+
+  useEffect(() => {
+    const currentSections = currentPageLayout?.sections ?? [];
+    const hero = currentSections.find((s: Section) => s.type === "hero");
     if (hero && hero.type === "hero") {
       setHeroLayout(hero.props.heroLayout ?? "split");
     }
-  }, [layoutForLanding?.sections]);
+  }, [currentPageLayout?.sections]);
 
   if (!ctx?.editable) return null;
 
@@ -239,8 +246,8 @@ export function ThemeEditorPanel() {
 
   const updateHeroProps = useCallback(
     (key: string, value: unknown) => {
-      if (heroIndex < 0 || !layoutForLanding || !onUpdateLanding) return;
-      const hero = layoutForLanding.sections[heroIndex];
+      if (heroIndex < 0 || !currentPageLayout || !onUpdateCurrentPage) return;
+      const hero = currentPageLayout.sections[heroIndex];
       if (hero.type !== "hero") return;
       let updated = { ...hero.props, [key]: value };
 
@@ -259,15 +266,25 @@ export function ThemeEditorPanel() {
             backgroundImage: hero.props.backgroundImage,
             imageQuery: hero.props.imageQuery,
           };
-          const slide2 = { ...baseSlide };
-          const slide3 = { ...baseSlide };
+          const slide2 = {
+            ...baseSlide,
+            heading: "Discover More",
+            subheading: "Explore our latest collection and top picks",
+            imageQuery: baseSlide.imageQuery ? `${baseSlide.imageQuery} collection` : "product showcase",
+          };
+          const slide3 = {
+            ...baseSlide,
+            heading: "New Arrivals",
+            subheading: "Check out the newest additions to our lineup",
+            imageQuery: baseSlide.imageQuery ? `${baseSlide.imageQuery} new arrival` : "new products",
+          };
           updated = { ...updated, slides: [baseSlide, slide2, slide3] };
         }
       }
 
-      onUpdateLanding(`sections.${heroIndex}.props`, updated);
+      onUpdateCurrentPage(`sections.${heroIndex}.props`, updated);
     },
-    [heroIndex, layoutForLanding, onUpdateLanding],
+    [heroIndex, currentPageLayout, onUpdateCurrentPage],
   );
 
   const hasLandingControls = navIndex >= 0 || heroIndex >= 0;
@@ -571,24 +588,104 @@ export function ThemeEditorPanel() {
             <p className="mb-1.5 text-xs font-medium uppercase tracking-wider text-white/70">Landing page style</p>
             <div className="space-y-2">
               {heroIndex >= 0 && (
-                <div>
-                  <span className="text-[10px] text-white/50">Hero layout</span>
-                  <select
-                    value={heroLayout}
-                    onChange={(e) => {
-                      const v = e.target.value;
-                      setHeroLayout(v);
-                      updateHeroProps("heroLayout", v);
-                    }}
-                    className="mt-0.5 w-full rounded-md border border-white/20 bg-white/10 px-2 py-1.5 text-xs text-white focus:border-orange-500 focus:outline-none"
-                  >
-                    {HERO_LAYOUT_OPTIONS.map((o) => (
-                      <option key={o.value} value={o.value} className="bg-[#1a1a1a] text-white">
-                        {o.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <>
+                  <div>
+                    <span className="text-[10px] text-white/50">Hero layout</span>
+                    <select
+                      value={heroLayout}
+                      onChange={(e) => {
+                        const v = e.target.value;
+                        setHeroLayout(v);
+                        updateHeroProps("heroLayout", v);
+                      }}
+                      className="mt-0.5 w-full rounded-md border border-white/20 bg-white/10 px-2 py-1.5 text-xs text-white focus:border-orange-500 focus:outline-none"
+                    >
+                      {HERO_LAYOUT_OPTIONS.map((o) => (
+                        <option key={o.value} value={o.value} className="bg-[#1a1a1a] text-white">
+                          {o.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="rounded-lg border border-dashed border-orange-500/30 bg-orange-500/5 p-2">
+                    <span className="text-[10px] font-medium uppercase tracking-wider text-orange-400/90">Hero image</span>
+                    <p className="mt-0.5 text-[10px] text-white/50">Paste URL or search to change image</p>
+                    {(() => {
+                      const hero = currentPageLayout?.sections[heroIndex];
+                      if (hero?.type !== "hero") return null;
+                      const slides = hero.props.slides ?? [];
+                      const hasSlides = slides.length >= 1;
+                      if (hasSlides) {
+                        return (
+                          <div className="mt-1 space-y-1.5">
+                            {slides.map((slide: { backgroundImage?: string; imageQuery?: string; heading?: string }, idx: number) => (
+                              <button
+                                key={idx}
+                                type="button"
+                                onClick={() => {
+                                  ctx?.openEditor({
+                                    path: `sections.${heroIndex}.props.slides.${idx}.backgroundImage`,
+                                    value: slide.backgroundImage ?? "",
+                                    type: "image",
+                                    label: `Slide ${idx + 1} image`,
+                                  });
+                                }}
+                                className="flex w-full items-center justify-center gap-2 rounded-lg border border-dashed border-white/30 bg-white/5 py-2 text-xs text-white/70 transition-colors hover:border-orange-500/50 hover:bg-white/10"
+                              >
+                                {slide.backgroundImage ? (
+                                  <>
+                                    <img
+                                      src={slide.backgroundImage.startsWith("http") ? `/api/image-proxy?url=${encodeURIComponent(slide.backgroundImage)}` : slide.backgroundImage}
+                                      alt={slide.heading ?? `Slide ${idx + 1}`}
+                                      className="h-8 w-8 rounded object-cover"
+                                    />
+                                    <span>Change slide {idx + 1} image</span>
+                                  </>
+                                ) : (
+                                  <>
+                                    <span className="text-base opacity-50">&#128247;</span>
+                                    <span>Add slide {idx + 1} image</span>
+                                  </>
+                                )}
+                              </button>
+                            ))}
+                          </div>
+                        );
+                      }
+                      const bgImg = hero.props.backgroundImage;
+                      return (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            ctx?.openEditor({
+                              path: `sections.${heroIndex}.props.backgroundImage`,
+                              value: bgImg ?? "",
+                              type: "image",
+                              label: "Hero image",
+                            });
+                          }}
+                          className="mt-1 flex w-full items-center justify-center gap-2 rounded-lg border border-dashed border-white/30 bg-white/5 py-2.5 text-xs text-white/70 transition-colors hover:border-orange-500/50 hover:bg-white/10"
+                        >
+                          {bgImg ? (
+                            <>
+                              <img
+                                src={bgImg.startsWith("http") ? `/api/image-proxy?url=${encodeURIComponent(bgImg)}` : bgImg}
+                                alt="Hero"
+                                className="h-8 w-8 rounded object-cover"
+                              />
+                              <span>Change hero image</span>
+                            </>
+                          ) : (
+                            <>
+                              <span className="text-base opacity-50">&#128247;</span>
+                              <span>Add hero image (paste URL or search)</span>
+                            </>
+                          )}
+                        </button>
+                      );
+                    })()}
+                  </div>
+                </>
               )}
               {navIndex >= 0 && (
                 <>

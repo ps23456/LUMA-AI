@@ -1,5 +1,88 @@
 [
   {
+    "id": "pat_1773658419970_q5q6xnq",
+    "industry": "e-commerce",
+    "usedAt": 1773658419970,
+    "navLayout": "default",
+    "heroLayout": "carousel",
+    "sectionTypes": [
+      "navbar",
+      "hero"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "sans-serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#000000",
+      "#FFFFFF",
+      "#007BFF"
+    ],
+    "designMood": "modern",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects on click",
+        "example": "Learn More"
+      }
+    ]
+  },
+  {
+    "id": "pat_1773657073774_matffn6",
+    "sourceUrl": "https://www.samsung.com/in/",
+    "industry": "e-commerce",
+    "usedAt": 1773657073774,
+    "navLayout": "default",
+    "heroLayout": "static",
+    "sectionTypes": [
+      "hero",
+      "product-grid",
+      "features",
+      "recommendations",
+      "footer"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "sans-serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#ffffff",
+      "#000000",
+      "#0078d4"
+    ],
+    "designMood": "modern",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click",
+        "example": "Each nav item links to #pagename"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects to shop/landing on click",
+        "example": "Learn more"
+      },
+      {
+        "type": "product-cards-clickable",
+        "description": "Product/category cards redirect to product/category page on click"
+      }
+    ]
+  },
+  {
     "id": "pat_1773656967132_a4puh96",
     "sourceUrl": "https://thesideblogger.com/best-blogging-platforms/",
     "industry": "other",
@@ -508,18 +591,14 @@
     ]
   },
   {
-    "id": "pat_1773657073774_matffn6",
-    "sourceUrl": "https://www.samsung.com/in/",
+    "id": "pat_1773658579349_yue328v",
     "industry": "e-commerce",
-    "usedAt": 1773657073774,
+    "usedAt": 1773658579349,
     "navLayout": "default",
-    "heroLayout": "static",
+    "heroLayout": "carousel",
     "sectionTypes": [
-      "hero",
-      "product-grid",
-      "features",
-      "recommendations",
-      "footer"
+      "navbar",
+      "hero"
     ],
     "hasNavDropdowns": false,
     "fonts": {
@@ -531,25 +610,20 @@
       "navWeight": "normal"
     },
     "colorPalette": [
-      "#ffffff",
       "#000000",
-      "#0078d4"
+      "#FFFFFF",
+      "#0078D4"
     ],
     "designMood": "modern",
     "interactivePatterns": [
       {
         "type": "nav-links-redirect",
-        "description": "Navigation links redirect to different pages on click",
-        "example": "Each nav item links to #pagename"
+        "description": "Navigation links redirect to different pages on click"
       },
       {
         "type": "hero-cta-redirect",
-        "description": "Hero CTA button redirects to shop/landing on click",
-        "example": "Learn more"
-      },
-      {
-        "type": "product-cards-clickable",
-        "description": "Product/category cards redirect to product/category page on click"
+        "description": "Hero CTA button redirects on click",
+        "example": "Learn More"
       }
     ]
   }

@@ -77,7 +77,7 @@ function OverlayHero({
           <SlideImage
             src={slide.backgroundImage}
             alt={slide.heading}
-            fallbackQuery={slide.imageQuery || `${slide.heading} flowers bouquet`}
+            fallbackQuery={slide.imageQuery || slide.heading}
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
@@ -149,7 +149,7 @@ function CenteredHero({
             <SlideImage
               src={slide.backgroundImage}
               alt={slide.heading}
-              fallbackQuery={slide.imageQuery || `${slide.heading} flowers bouquet`}
+              fallbackQuery={slide.imageQuery || slide.heading}
             />
             <div className="absolute inset-0 bg-black/50" />
           </div>
@@ -288,7 +288,7 @@ function SplitHero({
             <SlideImage
               src={slide.backgroundImage}
               alt={slide.heading}
-              fallbackQuery={slide.imageQuery || `${slide.heading} flowers bouquet`}
+              fallbackQuery={slide.imageQuery || slide.heading}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
           </div>
@@ -325,7 +325,7 @@ function MultiPanelHero({
                   <SlideImage
                     src={slide.backgroundImage}
                     alt={slide.heading}
-                    fallbackQuery={slide.imageQuery || `${slide.heading} flowers bouquet`}
+                    fallbackQuery={slide.imageQuery || slide.heading}
                   />
                 ) : (
                   <div className="flex h-full items-center justify-center bg-gradient-to-br from-[var(--accent)]/20 to-[var(--accent)]/5 text-6xl opacity-30">
@@ -393,21 +393,21 @@ function CarouselHero({
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="relative h-[600px] overflow-hidden sm:h-[650px] lg:h-[700px]">
+        <div
+          className="flex h-full transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${active * 100}%)` }}
+        >
         {slides.map((slide, idx) => (
           <div
             key={idx}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-              idx === active
-                ? "pointer-events-auto z-10 opacity-100"
-                : "pointer-events-none z-0 opacity-0"
-            }`}
+            className="relative h-full w-full shrink-0"
           >
             {slide.backgroundImage ? (
               <div className="absolute inset-0 overflow-hidden">
                 <SlideImage
                   src={slide.backgroundImage}
                   alt={slide.heading}
-                  fallbackQuery={slide.imageQuery || `${slide.heading} flowers bouquet`}
+                  fallbackQuery={slide.imageQuery || slide.heading}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20" />
               </div>
@@ -470,6 +470,7 @@ function CarouselHero({
             </div>
           </div>
         ))}
+        </div>
       </div>
 
       <button
