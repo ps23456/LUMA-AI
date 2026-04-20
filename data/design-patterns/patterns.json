@@ -1,5 +1,42 @@
 [
   {
+    "id": "pat_1773658579349_yue328v",
+    "industry": "e-commerce",
+    "usedAt": 1773658579349,
+    "navLayout": "default",
+    "heroLayout": "carousel",
+    "sectionTypes": [
+      "navbar",
+      "hero"
+    ],
+    "hasNavDropdowns": false,
+    "fonts": {
+      "heading": "sans-serif",
+      "body": "sans-serif",
+      "logo": "sans-serif",
+      "headingWeight": "bold",
+      "logoLetterSpacing": "normal",
+      "navWeight": "normal"
+    },
+    "colorPalette": [
+      "#000000",
+      "#FFFFFF",
+      "#0078D4"
+    ],
+    "designMood": "modern",
+    "interactivePatterns": [
+      {
+        "type": "nav-links-redirect",
+        "description": "Navigation links redirect to different pages on click"
+      },
+      {
+        "type": "hero-cta-redirect",
+        "description": "Hero CTA button redirects on click",
+        "example": "Learn More"
+      }
+    ]
+  },
+  {
     "id": "pat_1773658419970_q5q6xnq",
     "industry": "e-commerce",
     "usedAt": 1773658419970,
@@ -591,39 +628,47 @@
     ]
   },
   {
-    "id": "pat_1773658579349_yue328v",
+    "id": "pat_1776538562442_lvrrzzf",
+    "sourceUrl": "https://theflowercompany.in/",
     "industry": "e-commerce",
-    "usedAt": 1773658579349,
-    "navLayout": "default",
+    "usedAt": 1776538562442,
+    "navLayout": "centered",
     "heroLayout": "carousel",
     "sectionTypes": [
-      "navbar",
-      "hero"
+      "hero",
+      "product-grid",
+      "split-content",
+      "product-carousel"
     ],
     "hasNavDropdowns": false,
     "fonts": {
-      "heading": "sans-serif",
+      "heading": "serif",
       "body": "sans-serif",
-      "logo": "sans-serif",
+      "logo": "serif",
       "headingWeight": "bold",
-      "logoLetterSpacing": "normal",
+      "logoLetterSpacing": "wide",
       "navWeight": "normal"
     },
     "colorPalette": [
-      "#000000",
       "#FFFFFF",
-      "#0078D4"
+      "#000000",
+      "#D8A48F"
     ],
-    "designMood": "modern",
+    "designMood": "elegant",
     "interactivePatterns": [
       {
         "type": "nav-links-redirect",
-        "description": "Navigation links redirect to different pages on click"
+        "description": "Navigation links redirect to different pages on click",
+        "example": "Each nav item links to #pagename"
       },
       {
         "type": "hero-cta-redirect",
-        "description": "Hero CTA button redirects on click",
-        "example": "Learn More"
+        "description": "Hero CTA button redirects to shop/landing on click",
+        "example": "Shop Now"
+      },
+      {
+        "type": "product-cards-clickable",
+        "description": "Product/category cards redirect to product/category page on click"
       }
     ]
   }

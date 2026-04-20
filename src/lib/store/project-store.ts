@@ -5,7 +5,11 @@ const STORAGE_KEY = "mocha-projects";
 const ACTIVE_PROJECT_KEY = "mocha-active-project";
 
 function generateId(): string {
-  return crypto.randomUUID();
+  const c = typeof globalThis !== "undefined" ? globalThis.crypto : undefined;
+  if (c && typeof c.randomUUID === "function") {
+    return c.randomUUID();
+  }
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 11)}`;
 }
 
 function createDefaultPage(): ProjectPage {
